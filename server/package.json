@@ -6,7 +6,8 @@
     "main": "app.js",
     "scripts": {
         "dev": "tsc-watch --noClear -p ./tsconfig.json --outDir ./dist --onSuccess \"node ./dist/app.js\"",
-        "start": "node dist/app.js"
+        "build": "tsc -p ./tsconfig.json",
+        "start": "npm run build && node dist/app.js"
     },
     "keywords": [
         "Wizz World",
