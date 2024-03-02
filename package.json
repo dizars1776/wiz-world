@@ -4,14 +4,21 @@
     "description": "Wiz World full stack app",
     "main": "index.js",
     "scripts": {
-        "install": "cd server && npm install",
-        "start": "cd server && npm start",
-        "server": "cd server && npm run dev"
+        "install": "npm install && cd server && npm install && cd client && npm install",
+        "install:prod": "cd server && npm install && cd client && npm install",
+        "start": "cd server/client && npm run build && cd ../ && npm start",
+        "server": "cd server && npm run dev",
+        "client:start": "cd server/client && npm run dev",
+        "client:build": "cd server/client && npm run build",
+        "dev": "concurrently \"npm run server\" \"npm run client:start\""
     },
     "keywords": [],
     "author": "dizars1776",
     "engines": {
         "node": ">=21.6.1",
         "npm": ">=10.2.4"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
     }
 }
