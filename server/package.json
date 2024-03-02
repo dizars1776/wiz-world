@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "type": "module",
     "description": "Wizz-world node backend",
-    "main": "app.ts",
+    "main": "app.js",
     "scripts": {
         "dev": "tsc-watch --noClear -p ./tsconfig.json --outDir ./dist --onSuccess \"node ./dist/app.js\"",
         "start": "node dist/app.js"

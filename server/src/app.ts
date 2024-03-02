@@ -5,8 +5,7 @@ import { fileURLToPath } from 'url'
 import housesRouter from './routes/housesRouter.js'
 
 const app = express()
-const baseUrl = 'http://localhost'
-const port = 9090
+const port = process.env.PORT || 9090;
 
 // Middlewares
 app.use(morgan('dev'))
@@ -25,6 +24,6 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Wizz-World app is listening on port ${baseUrl}:${port}`)
+    console.log(`Wizz-World app is listening on port ${port}`)
 })
 
