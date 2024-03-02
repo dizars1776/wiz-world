@@ -1,0 +1,17 @@
+{
+    "name": "wiz-world",
+    "version": "0.1.0",
+    "description": "Wiz World full stack app",
+    "main": "index.js",
+    "scripts": {
+        "install": "cd server && npm install",
+        "start": "cd server && npm start",
+        "server": "cd server && npm run dev"
+    },
+    "keywords": [],
+    "author": "dizars1776",
+    "engines": {
+        "node": ">=21.6.1",
+        "npm": ">=10.2.4"
+    }
+}
